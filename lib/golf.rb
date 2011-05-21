@@ -23,16 +23,8 @@ class Golf
     end
   
     def hole6(m)
-      1.upto(m).map { |i|
-        if i % 15 == 0
-          "fizzbuzz"
-        elsif i % 3 == 0
-          "fizz"
-        elsif i % 5 == 0
-          "buzz"
-        else
-          i
-        end
+      (1..m).map { |i|
+        (i % 15 == 0) ? "fizzbuzz" : (i % 5 == 0) ? "buzz" : (i % 3 == 0) ? "fizz" : i
       }
     end
   
