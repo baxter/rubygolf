@@ -13,19 +13,17 @@ class Golf
     end
   
     def hole4(things)
-      things.map! { |t| t.sub(/(man.*)/,'hat(\1)') }
-      things.map! { |t| t.sub(/dog\((.*)\)/,'dog(\1(bone))') }
-      things.map! { |t| t.sub(/cat/,'dead') }
+      things.map { |t| t.sub(/(man.*)/,'hat(\1)').sub(/dog\((.*)\)/,'dog(\1(bone))').sub(/cat/,'dead') }
     end
   
     def hole5(nums)
-      sublists = [];
+      sublists = []
       4.times { |l| 4.times { |i| sublists << nums[i..i+l] } }
       sublists.uniq
     end
   
-    def hole6(max)
-      1.upto(max).map { |i|
+    def hole6(m)
+      1.upto(m).map { |i|
         if i % 15 == 0
           "fizzbuzz"
         elsif i % 3 == 0
