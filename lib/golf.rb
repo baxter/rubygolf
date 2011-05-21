@@ -8,12 +8,12 @@ class Golf
       w.split.sort_by {|w| w[1]}.join(" ")
     end
   
-    def hole3(num)
-      (num == 1) ? 1 : num * hole3(num - 1)
+    def hole3(n)
+      (n == 1) ? 1 : n * hole3(n - 1)
     end
   
-    def hole4(things)
-      things.map { |t| t.sub(/(man.*)/,'hat(\1)').sub(/dog\((.*)\)/,'dog(\1(bone))').sub(/cat/,'dead') }
+    def hole4(o)
+      o.map { |t| t.sub(/(man.*)/,'hat(\1)').sub(/dog\((.*)\)/,'dog(\1(bone))').sub(/cat/,'dead') }
     end
   
     def hole5(n)
