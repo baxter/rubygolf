@@ -37,12 +37,7 @@ class Golf
     end
   
     def hole8(n)
-      if n == 2
-        [1,1]
-      else
-        a = hole8(n - 1)
-        a.push(a[-1]+a[-2])
-      end
+      (n == 2) ? [1,1] : (a = hole8(n - 1); a.push(a[-1]+a[-2]))
     end
   
     def round(b)
