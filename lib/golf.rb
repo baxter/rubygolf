@@ -1,7 +1,7 @@
 class Golf
   class << self
     def hole1(p)
-      p.inject(1) { |a,b| a * b }
+      p.inject(:*)
     end
   
     def hole2(w)
