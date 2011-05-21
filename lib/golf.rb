@@ -5,7 +5,7 @@ class Golf
     end
   
     def hole2(w)
-      w.split.sort { |a,b| a[1] <=> b[1] }.join(" ")
+      w.split.sort_by {|w| w[1]}.join(" ")
     end
   
     def hole3(num)
@@ -16,10 +16,10 @@ class Golf
       things.map { |t| t.sub(/(man.*)/,'hat(\1)').sub(/dog\((.*)\)/,'dog(\1(bone))').sub(/cat/,'dead') }
     end
   
-    def hole5(nums)
-      sublists = []
-      4.times { |l| 4.times { |i| sublists << nums[i..i+l] } }
-      sublists.uniq
+    def hole5(n)
+      x = []
+      (1..4).each { |i| x += n.each_cons(i).to_a }
+      x
     end
   
     def hole6(m)
