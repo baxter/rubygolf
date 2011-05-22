@@ -9,7 +9,7 @@ class Golf
     end
   
     def hole3(n)
-      n.downto(2).inject(:*)
+      (2..n).inject(:*)
     end
   
     def hole4(o)
