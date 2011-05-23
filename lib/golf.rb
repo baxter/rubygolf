@@ -9,7 +9,7 @@ class Golf
     end
   
     def hole3(n)
-      (n == 1) ? 1 : n * hole3(n - 1)
+      (2..n).inject(:*)
     end
   
     def hole4(o)
